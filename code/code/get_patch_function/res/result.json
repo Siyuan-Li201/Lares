@@ -1,0 +1,31 @@
+{
+    "b/ssl/t1_enc.c:tls1_change_cipher_state": {
+        "function_name": "tls1_change_cipher_state",
+        "file_name": "b/ssl/t1_enc.c",
+        "vuln_version_tag": "72015f5aad",
+        "patch_version_tag": "56db834306",
+        "added_code": {
+            "417": "\t\tif (s->enc_write_ctx != NULL && !SSL_IS_DTLS(s))",
+            "419": "\t\telse if ((s->enc_write_ctx=EVP_CIPHER_CTX_new()) == NULL)",
+            "422": "\t\tif (SSL_IS_DTLS(s))",
+            "423": "\t\t\t{",
+            "424": "\t\t\tmac_ctx = EVP_MD_CTX_create();",
+            "425": "\t\t\tif (!mac_ctx)",
+            "426": "\t\t\t\tgoto err;",
+            "427": "\t\t\ts->write_hash = mac_ctx;",
+            "428": "\t\t\t}",
+            "429": "\t\telse",
+            "430": "\t\t\tmac_ctx = ssl_replace_hash(&s->write_hash,NULL);"
+        },
+        "deleted_code": {
+            "417": "\t\tif (s->enc_write_ctx != NULL)",
+            "419": "\t\telse if ((s->enc_write_ctx=OPENSSL_malloc(sizeof(EVP_CIPHER_CTX))) == NULL)",
+            "421": "\t\telse",
+            "422": "\t\t\t/* make sure it's intialized in case we exit later with an error */",
+            "423": "\t\t\tEVP_CIPHER_CTX_init(s->enc_write_ctx);",
+            "425": "\t\tmac_ctx = ssl_replace_hash(&s->write_hash,NULL);",
+            "429": "- "
+        },
+        "patch_type": "modify"
+    }
+}

@@ -1,0 +1,33 @@
+You are a software reverse engineer analyzing decompiled pseudo code. Your task is to determine whether the code is patched or pre-patch version by analyzing the reliability of matching results. Must only output your findings as a JSON dictionary.
+
+INPUT:
+1. Diff File: <patch_diff_label>
+2. Variable Context: <comments_label>
+3. P_result (patched version matches): <patch_result_json>
+4. V_result (pre-patch version matches): <vul_result_json>
+
+ANALYSIS REQUIREMENTS:
+1. Evaluate each match in p_result and v_result:
+   - Semantic correctness
+   - Logic consistency
+   - Context compatibility
+   - Potential false matches
+
+2. Compare quality of matches:
+   - Which version has more reliable matches
+   - Which matches might be incorrect
+   - Overall semantic alignment
+
+RULES:
+- Only one result (p_result or v_result) corresponds to the correct version
+- Better semantic match determines the version
+
+OUTPUT FORMAT:
+{
+    "evidence": {
+        "p_result_analysis": ["reliable matches", "suspicious matches"],
+        "v_result_analysis": ["reliable matches", "suspicious matches"],
+        "reasoning": "why one version's matches are more convincing"
+    },
+    "correct_result": "pre-patch version" or "patched version"
+}

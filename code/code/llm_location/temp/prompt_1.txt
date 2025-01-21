@@ -1,0 +1,7 @@
+生成一段python代码。输入如下格式的json字典, "match result"中的key是source code中的代码行, value是pseudo code中对应的代码。从"match result"的对应代码中提取每条对应代码的source code中的基础操作指令以及pseudo code中的基础操作指令。基础操作指令有五种：比较语句(if或switch case，do,while,for中的比较语句),赋值语句，定义语句，返回值，函数参数。如匹配对1中的if语句包含多个判断条件，把他们分解成多个指令。接着，将分解好的每个基础操作代码中将所有代码的变量，以及诸如var1->method->version和**(_DWORD **)(var1 + 8)之类的对var1的非基础操作(不属于五种基础操作，而是使用了其他结构体指针或指针运算)都归一化为一个新的变量名。对于分解后的基本指令中涉及多个变量的，每个公式里归一化为从1开始的x1,x2等变量。最终输出一个json字典。
+
+输入json： { "match result": { "if (s->method->version == TLS1_2_VERSION && alg2 == (SSL_HANDSHAKE_MAC_DEFAULT|TLS1_PRF)) //patch_code": [ "if ( **(_DWORD **)(a1 + 8) == 771 && *(_DWORD )((_DWORD )((_DWORD *)(a1 + 88) + 836) + 36) == 49200 )" ], "return SSL_HANDSHAKE_MAC_SHA256 | TLS1_PRF_SHA256; //locate_code": [ "v2 = 131200;" ], "return alg2; //locate_code": [ "v2 = *(_DWORD )((_DWORD )((_DWORD *)(a1 + 88) + 836) + 36);", "return v2;" ] } }
+
+示例输出json： { "if (s->method->version == TLS1_2_VERSION && alg2 == (SSL_HANDSHAKE_MAC_DEFAULT|TLS1_PRF)) //patch_code": { "source code": { "x1 == x2", "x1 == x2" }, "pseudo code": { "x1 == 771", "x1 == 49200" } }, "return SSL_HANDSHAKE_MAC_SHA256 | TLS1_PRF_SHA256; //locate_code": { "source code": { "return = x1", }, "pseudo code": { "x1 = 131200" } }, "return alg2; //locate_code": { "source code": { "return = x1", }, "pseudo code": { "x1 = x2", "return = x1" } }
+
+}

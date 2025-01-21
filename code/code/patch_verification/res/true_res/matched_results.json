@@ -1,0 +1,85 @@
+{
+    "if (s->session->sess_cert == NULL)": [
+        {
+            "line_number": 366,
+            "code_line": "v9 = *(_DWORD *)(*(_DWORD *)(a1 + 192) + 152);",
+            "similarity": 0.8936170212765957
+        },
+        {
+            "line_number": 464,
+            "code_line": "v3 = *(_DWORD *)(*(_DWORD *)(a1 + 192) + 152);",
+            "similarity": 0.8936170212765957
+        }
+    ],
+    "ssl3_send_alert(s,SSL3_AL_FATAL,SSL_AD_UNEXPECTED_MESSAGE);": [
+        {
+            "line_number": 150,
+            "code_line": "sub_80AAAA0(a1, 2, 10);",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 458,
+            "code_line": "sub_80AAAA0(a1, 2, 10);",
+            "similarity": 1.0
+        }
+    ],
+    "SSLerr(SSL_F_SSL3_SEND_CLIENT_KEY_EXCHANGE,SSL_R_UNEXPECTED_MESSAGE);": [
+        {
+            "line_number": 461,
+            "code_line": "sub_812B190(20, 152, 244, \"s3_clnt.c\", v55);",
+            "similarity": 1.0
+        }
+    ],
+    "goto err;": [
+        {
+            "line_number": 148,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 228,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 237,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 243,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 320,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 325,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 347,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 354,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 462,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        },
+        {
+            "line_number": 511,
+            "code_line": "goto LABEL_46;",
+            "similarity": 1.0
+        }
+    ]
+}

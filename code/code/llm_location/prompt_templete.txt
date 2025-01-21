@@ -1,0 +1,16 @@
+Suppose you are a software reverse engineer with strong code analysis skills. You have the source code of a function and the pseudo code obtained through binary decompilation. The variable name information in the Pseudo code is lost. Lines in the source code that end with "    // patch_code" are patch codes. Some patch codes contain macro definitions in comments. Lines in the source code that end with "    // locate_code" are locate codes. Can you identify the patch codes and locate codes in the pseudo code that corresponds to the patch code? Must only output your findings as a JSON dictionary. Keep the comments (like " // 2") in the matched pseudocode.
+
+output format:
+{
+    "new match result":{
+        "a line of patch code": ["coresponding code1 in pseudo code", "coresponding code2 in pseudo code", ...],
+        more result...
+    },
+    "corresponding pseudo code": "the corresponding pseudo code snippet"
+}
+
+source code:
+<source_code_label>
+
+pseudo code:
+<pseudo_code_label>

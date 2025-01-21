@@ -1,0 +1,16 @@
+Suppose you are a software reverse engineer with strong code analysis skills. You have the source code of a function and the pseudo code obtained through binary decompilation. The variable name information in the Pseudo code is lost. Lines in the source code that end with "# patch line" are patch codes. Can you identify the code in the pseudo code that corresponds to the patch code? Must only output your findings as a JSON dictionary.
+
+output format:
+{
+    "new match result":{
+        "a line of patch code": "coresponding code in pseudo code",
+        more result...
+    },
+    "corresponding pseudo code": "the corresponding pseudo code snippet"
+}
+
+source code:
+<source_code_label>
+
+pseudo code:
+<pseudo_code_label>

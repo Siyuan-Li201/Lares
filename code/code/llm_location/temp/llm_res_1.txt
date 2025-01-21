@@ -1,0 +1,11 @@
+Based on the source code and pseudo code, here's the analysis:
+
+{
+    "new match result": {
+        "if (s->session->sess_cert == NULL)  // patch line": "if ( *(_DWORD *)(a1 + 192) == 0 )",
+        "ssl3_send_alert(s,SSL3_AL_FATAL,SSL_AD_UNEXPECTED_MESSAGE);  // patch line": "sub_80AAAA0(a1, 2, 10);",
+        "SSLerr(SSL_F_SSL3_SEND_CLIENT_KEY_EXCHANGE,SSL_R_UNEXPECTED_MESSAGE);  // patch line": "sub_812B190(20, 152, 244, \"s3_clnt.c\", v55);",
+        "goto err;  // patch line": "goto LABEL_46;"
+    },
+    "corresponding pseudo code": "if ( *(_DWORD *)(a1 + 192) == 0 ) { sub_80AAAA0(a1, 2, 10); sub_812B190(20, 152, 244, \"s3_clnt.c\", v55); goto LABEL_46; }"
+}
