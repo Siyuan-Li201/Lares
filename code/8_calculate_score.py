@@ -657,7 +657,7 @@ def process_csv_files(csv1_path, csv2_path, result_path="result.csv"):
     else:
         print("No matching rows found where detection results changed to FP/FN")
 
-# calculate_score("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data")
+# calculate_score("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data")
 # analyze_results("./output.csv")
 
 
@@ -946,10 +946,10 @@ def filter_detection_results(input_file, res_file):
 
 # calculate my result
 
-calculate_score("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data")
+calculate_score("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data")
 # analyze_results("./output_llm.csv")
 
-# calculate_score_z3("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data")
+# calculate_score_z3("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data")
 # analyze_results("./output_z3.csv")
 
 filter_detection_results('output_z3.csv', 'output_z3_filtered.csv')
@@ -974,7 +974,7 @@ analyze_results("./output.csv")
 # print(f"Number of unique CVEs: {result_cves}")
 # print(f"Number of unique functions (without hex): {result_funcs}")
 
-# cve_count, func_count, unique_cves, unique_funcs = analyze_directory('/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data')
+# cve_count, func_count, unique_cves, unique_funcs = analyze_directory('/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data')
 # print(f"Number of unique CVEs: {cve_count}")
 # print(f"Number of unique functions: {func_count}")
 # print("\nUnique CVEs:", sorted(unique_cves))
@@ -983,29 +983,29 @@ analyze_results("./output.csv")
 
 # calculate robin gcc result
 # calculate_robin_gcc_score(
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/other_res/robin_rq1_results_0905.csv', 
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/output.csv', 
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/robin_gcc.csv',
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/other_res/robin_rq1_results_0905.csv', 
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/output.csv', 
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/robin_gcc.csv',
 #     'gcc')
 
-# analyze_results('/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/robin_gcc.csv')
+# analyze_results('/media/author/4A7AC8957AC87F67/work2024/code/llm_api/robin_gcc.csv')
 
 
 # calculate robin clang result
 # calculate_robin_clang_score(
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/other_res/robin-optim-clang-1203.csv', 
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/output.csv', 
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/robin_clang.csv',
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/other_res/robin-optim-clang-1203.csv', 
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/output.csv', 
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/robin_clang.csv',
 #     'clang')
 
-# analyze_results('/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/robin_clang.csv')
+# analyze_results('/media/author/4A7AC8957AC87F67/work2024/code/llm_api/robin_clang.csv')
 
 
 # calculate ps3 gcc result
 # calculate_ps3_gcc_score(
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/other_res/test_res-rq1.csv', 
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/output.csv', 
-#     '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/ps3_gcc.csv',
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/other_res/test_res-rq1.csv', 
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/output.csv', 
+#     '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/ps3_gcc.csv',
 #     'gcc')
 
-# analyze_results('/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/ps3_gcc.csv')
+# analyze_results('/media/author/4A7AC8957AC87F67/work2024/code/llm_api/ps3_gcc.csv')

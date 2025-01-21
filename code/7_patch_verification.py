@@ -345,7 +345,7 @@ def patch_verification_z3(data_dir, tmp_dir):
                 # Create result directory for patched analysis
 
                 res_dir = os.path.join(dir_path, "ares_" + filename)
-                if res_dir != "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2014-3470_ssl3_send_client_key_exchange_3/ares_x86_clang_O2_openssl_1.0.1h_strip_ssl3_send_client_key_exchange_0x0809f5b0":
+                if res_dir != "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2014-3470_ssl3_send_client_key_exchange_3/ares_x86_clang_O2_openssl_1.0.1h_strip_ssl3_send_client_key_exchange_0x0809f5b0":
                     continue
 
                 if not os.path.exists(res_dir):
@@ -999,12 +999,12 @@ def filter_sig_z3(data_dir, tmp_dir):
 
 
 
-patch_verification("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data")
+patch_verification("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data")
 
-# patch_verification_z3("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data", "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/tmp")
-
-
-# filter_sig_z3("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data", "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/tmp")
+# patch_verification_z3("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data", "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/tmp")
 
 
-# patch_verification_result_z3("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data")
+# filter_sig_z3("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data", "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/tmp")
+
+
+# patch_verification_result_z3("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data")

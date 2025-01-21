@@ -243,12 +243,12 @@ if __name__ == '__main__':
     # if len(sys.argv) != 5:
     #     print("Usage: python script.py <patch_path> <source_path> <tmp_path> <res_save_path>")
     #     sys.exit(1)
-    xlsx_file = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/cve_data_0731.xlsx"
-    patch_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/sig"   #sys.argv[1]
-    source_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/source"     #sys.argv[2]
-    tmp_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/tmp"   #sys.argv[3]
-    res_save_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data"     #sys.argv[4]
-    src_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/src"
+    xlsx_file = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/cve_data_0731.xlsx"
+    patch_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/sig"   #sys.argv[1]
+    source_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/source"     #sys.argv[2]
+    tmp_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/tmp"   #sys.argv[3]
+    res_save_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data"     #sys.argv[4]
+    src_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/src"
 
     
     main(xlsx_file, patch_path, source_path, tmp_path, res_save_path)

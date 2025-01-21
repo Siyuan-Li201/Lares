@@ -143,7 +143,7 @@ def patch_detection_dataset(data_dir):
 
 
 if __name__ == "__main__":
-    cve_dir = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data"
+    cve_dir = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data"
     patch_detection_dataset(cve_dir)
 
     

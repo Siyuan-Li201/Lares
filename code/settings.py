@@ -1,1 +1,1 @@
-ida_path = "/home/REMOVED/software/ida/ida75/idapro-7.5/idat"
+ida_path = "/home/author/software/ida/ida75/idapro-7.5/idat"

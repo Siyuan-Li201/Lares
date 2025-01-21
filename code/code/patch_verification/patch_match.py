@@ -268,7 +268,7 @@ def match_patch(source_file, pseudo_file, json_file, match_res, verify_res):
     # 文件路径
     
     
-    # json_file = '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/code/llm_location/selected_res/patch_false_claude35.json'
+    # json_file = '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/code/llm_location/selected_res/patch_false_claude35.json'
 
     # 读取文件
     list1 = read_c_file(pseudo_file)
@@ -317,10 +317,10 @@ def match_patch(source_file, pseudo_file, json_file, match_res, verify_res):
 
 if __name__ == "__main__":
 
-    filepath = json.load(open('/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2016-4487-1/filepath.json', "r"))
+    filepath = json.load(open('/media/author/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2016-4487-1/filepath.json', "r"))
 
-    verify_res = '/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2016-4487-1/verified_matched_dict.json'
-    match_res = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2016-4487-1/matched_results.json"
+    verify_res = '/media/author/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2016-4487-1/verified_matched_dict.json'
+    match_res = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2016-4487-1/matched_results.json"
 
     source_file = filepath["source_sliced"]
     pseudo_file_list = filepath["pseudo_sliced_list"]

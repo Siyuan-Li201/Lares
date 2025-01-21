@@ -34,4 +34,4 @@ def recover_error(data_directory):
             continue
 
 
-recover_error("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data")
+recover_error("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data")

@@ -38,8 +38,8 @@ def generate_json_files_from_c(patch_dir, res_dir):
 
 if __name__ == "__main__":
     # 输入 patch 路径和 res 路径
-    patch_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/src/"   #input("请输入patch路径: ").strip()
-    res_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/sig/"    #input("请输入res路径: ").strip()
+    patch_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/src/"   #input("请输入patch路径: ").strip()
+    res_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/sig/"    #input("请输入res路径: ").strip()
 
     if not os.path.exists(patch_path):
         print(f"patch路径 {patch_path} 不存在！")

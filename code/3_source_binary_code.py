@@ -384,8 +384,8 @@ if __name__ == "__main__":
     #     print("Usage: python script_name.py data_directory")
     # else:
 
-    data_directory = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data"  #sys.argv[1]
-    bin_directory = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/bin"  #sys.argv[2]
+    data_directory = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data"  #sys.argv[1]
+    bin_directory = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/bin"  #sys.argv[2]
     patch_prompt_generation(data_directory)
     # pseudo_prompt_generation(data_directory, bin_directory)
 

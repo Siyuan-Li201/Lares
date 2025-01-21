@@ -484,10 +484,10 @@ def analyzeDominanceConstantDataflow(func: nodes.Method, targetLineNumber: Int):
 
 // 2. 主脚本
 
-val cpgPath = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2019-1563_pkcs7_decrypt_rinfo_9/openssl_08229ad838c50f644d7e928e2eef147b4308ad64^.cpg"
+val cpgPath = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2019-1563_pkcs7_decrypt_rinfo_9/openssl_08229ad838c50f644d7e928e2eef147b4308ad64^.cpg"
 val functionName = "pkcs7_decrypt_rinfo"
 val targetLines = List(173)
-val resPath = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2019-1563_pkcs7_decrypt_rinfo_9/pkcs7_decrypt_rinfo_vul_code_joern.json"
+val resPath = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2019-1563_pkcs7_decrypt_rinfo_9/pkcs7_decrypt_rinfo_vul_code_joern.json"
 
 
 // 加载 CPG

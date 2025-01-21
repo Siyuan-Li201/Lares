@@ -30,8 +30,8 @@ def copy_c_files(src_dir, dest_dir):
 
 if __name__ == "__main__":
     # 输入初始目录和目标目录
-    initial_dir = "/media/REMOVED/4A7AC8957AC87F67/work2024/mypaper/patch_detection/data/plocator_data_1203/patches/"   #input("请输入初始文件夹目录: ").strip()
-    save_dir = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/"   #input("请输入保存目录: ").strip()
+    initial_dir = "/media/author/4A7AC8957AC87F67/work2024/mypaper/patch_detection/data/plocator_data_1203/patches/"   #input("请输入初始文件夹目录: ").strip()
+    save_dir = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/"   #input("请输入保存目录: ").strip()
 
     if not os.path.exists(initial_dir):
         print(f"初始目录 {initial_dir} 不存在！")

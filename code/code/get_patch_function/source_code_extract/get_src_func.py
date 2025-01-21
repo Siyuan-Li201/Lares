@@ -136,11 +136,11 @@ def get_identifier(node):
     return None
 
 if __name__ == '__main__':
-    source_project_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/source/openssl"   #sys.argv[1]      # 
+    source_project_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/source/openssl"   #sys.argv[1]      # 
     function_name = "ssl3_send_client_key_exchange"        #sys.argv[4]
-    result_save_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/code/get_patch_function/res/"+function_name+".c" # sys.argv[2]     #      
+    result_save_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/code/get_patch_function/res/"+function_name+".c" # sys.argv[2]     #      
     tag_version = "OpenSSL_1_0_0m"   #sys.argv[3]       # 
-    tmp_dir_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/tmp"  #sys.argv[5]      #
+    tmp_dir_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/tmp"  #sys.argv[5]      #
 
 
     function_content, line_number = get_source_func(source_project_path, function_name, tag_version, tmp_dir_path)

@@ -161,4 +161,4 @@ def reverse_detection(data_dir):
                         print("Error in patch_detection_one")
                         continue            
 
-reverse_detection("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data")
+reverse_detection("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data")

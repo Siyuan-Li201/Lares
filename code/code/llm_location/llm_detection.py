@@ -1426,7 +1426,7 @@ if __name__ == '__main__':
 
     # 获取当前时间戳
     # timestamp = int(time.time())
-    os.chdir("/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/code/llm_location/")
+    os.chdir("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/code/llm_location/")
     # 设置文件路径
     file_path = f"./temp/"
     res_path = f"./res/filepath.json"

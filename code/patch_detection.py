@@ -65,10 +65,10 @@ def patch_detection_one(source_path, pseudo_path, res_path):
 
 if __name__ == "__main__":
 
-    data_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2013-6450_tls1_change_cipher_state_1"
+    data_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data/CVE-2013-6450_tls1_change_cipher_state_1"
 
 
-    res_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2013-6450_tls1_change_cipher_state_1/clang_x86_O0_vul"
+    res_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/res/CVE-2013-6450_tls1_change_cipher_state_1/clang_x86_O0_vul"
 
 
     # ssl3_send_client_key_exchange

@@ -89,8 +89,8 @@ def get_func_pseudo(binary_path, binary_strip_path, function_name):
 
 if __name__ == "__main__":
 
-    binary_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/bin/O3/openssl-1.0.1h"
-    binary_strip_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/bin/O3/openssl-1.0.1h.strip"
+    binary_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/bin/O3/openssl-1.0.1h"
+    binary_strip_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/bin/O3/openssl-1.0.1h.strip"
 
     function_name = "ssl3_send_client_key_exchange"
 

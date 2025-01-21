@@ -714,9 +714,9 @@ def source_enhanced_generation(data_dir):
 
 if __name__ == "__main__":
 
-    data_directory = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/data"  #sys.argv[1]
-    tmp_dir_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/tmp"  #sys.argv[2]
-    source_dir = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/source"  #sys.argv[3]
+    data_directory = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/data"  #sys.argv[1]
+    tmp_dir_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/tmp"  #sys.argv[2]
+    source_dir = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/source"  #sys.argv[3]
 
     # source_enhance(data_directory, tmp_dir_path, source_dir)
 

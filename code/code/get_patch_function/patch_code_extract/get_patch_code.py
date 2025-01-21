@@ -174,8 +174,8 @@ def main():
     # res_path = sys.argv[2]
 
 
-    patch_file_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/test_patch.diff"
-    res_path = "/media/REMOVED/4A7AC8957AC87F67/work2024/code/llm_api/code/get_patch_function/res/result.json"
+    patch_file_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/dataset/patch/test_patch.diff"
+    res_path = "/media/author/4A7AC8957AC87F67/work2024/code/llm_api/code/get_patch_function/res/result.json"
 
     parsed_data = parse_patch(patch_file_path)
     save_json(parsed_data, res_path)
