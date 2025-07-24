@@ -20,7 +20,7 @@ We introduce Lares, a novel patch presence testing framework, to verify whether 
 
 #### 2.1 Download the Pre-prepared examples
 
-- The code with pre-prepared examples is here (Google Drive). Download and unzip it.
+- The code with pre-prepared examples is [here](https://drive.google.com/file/d/1V05mOJHh4wBNKAwnMfpfzTV7rKywSkwQ/view?usp=sharing) (Google Drive). Download and unzip it.
 - Download the required pip packages.
 
 #### 2.2 Have a quick start
@@ -34,6 +34,7 @@ python3 8_calculate_score.py
 <br><br>
 
 ## 3. Full process
+The complete code can be found on GitHub. We will soon release a Docker image with complete environment dependencies and a packaged mature tool, Lares.
 
 #### 3.1 Prepare the datasets
 - put the binaries at _code/dataset/bin/_
@@ -50,10 +51,10 @@ python3 3_source_binary_code.py
 
 #### 3.2 Run Lares
 ```
-python3 4_source_enhance.py
-python3 5_patch_detection.py
-python3 6_reverse_detection.py
-python3 7_patch_verification.py
-python3 8_calculate_score.py
+python3 4_source_enhance.py  ## data flow analysis, control flow analysis and macro analysis
+python3 5_patch_detection.py  ## patch location
+python3 6_reverse_detection.py  ## generate two pseudo code slices
+python3 7_patch_verification.py  ## patch verification
+python3 8_calculate_score.py  ## get final results
 ```
 
