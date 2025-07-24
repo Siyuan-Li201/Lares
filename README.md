@@ -30,7 +30,7 @@ python3 8_calculate_score.py
 ```
 #### 2.3 Expected results
 The result shown in _result.png_
-<img src="result.png" width = 1600 height = 1000>
+<img src="result.png" width = 1600 height = 500>
 
 <br><br>
 
