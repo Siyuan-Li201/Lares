@@ -29,7 +29,7 @@ python3 7_patch_verification.py
 python3 8_calculate_score.py
 ```
 #### 2.3 Expected results
-The result shown in _result.png_
+The result is shown in _result.png_
 <img src="result.png" width = 1600 height = 500>
 
 <br><br>
