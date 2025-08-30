@@ -5,9 +5,11 @@ import os
 import copy
 import sys
 
-sys.path.append("code/code_compare")
+sys.path.append("code/code/code_compare")
+sys.path.append("code")
 
 import lexer_analysis
+import settings
 
 def source_slice_old(source_code):
     def find_patch_line_index(lines):
@@ -950,7 +952,7 @@ def get_verification_prompt(constant_mappings, patch_res_path, vul_res_path, pat
 
 
     # Load template, replace labels, and save the final result
-    with open("prompt_templete_verification.txt", "r", encoding="utf-8") as file:
+    with open("code/prompt_templete_verification.txt", "r", encoding="utf-8") as file:
         prompt_content = file.read()
     
     detection_res = {}
@@ -1152,7 +1154,7 @@ def get_prompt(source_file, pseudo_file, res_file):
 
 
     # Load template, replace labels, and save the final result
-    with open("prompt_templete_locate.txt", "r", encoding="utf-8") as file:
+    with open("code/prompt_templete_locate.txt", "r", encoding="utf-8") as file:
         prompt_content = file.read()
     
     detection_res = {}
@@ -1311,9 +1313,9 @@ def llm_verification(prompt_content, res_file, ver_file):
         
     llm_res_data = read_json_file(res_file)
    
-    conn = http.client.HTTPSConnection("api.openai-hub.com")
+    conn = http.client.HTTPSConnection(settings.api_url)
     payload = json.dumps({
-        "model": "claude-3-5-sonnet-latest",
+        "model": settings.model,
         "messages": [
             {
                 "role": "user",
@@ -1322,8 +1324,7 @@ def llm_verification(prompt_content, res_file, ver_file):
         ]
     })
     headers = {
-        'Authorization': 'Bearer sk-BUEJL4vJdlR2S5vaGpWEqGieInVoPfy6kLOV84mYYG0T1vu2',  # 请替换为您的API密钥
-        # 'Authorization': 'Bearer sk-L19BPaTstTGlWEb3hOAnnlreMEMRdQRWg3V2EpZHYzlGJlca',
+        'Authorization': settings.user_key,  # 请替换为您的API密钥
         'Content-Type': 'application/json'
     }
     conn.request("POST", "/v1/chat/completions", payload, headers)
@@ -1365,9 +1366,9 @@ def llm_detection(prompt_content, res_file):
     timeout_retry = 1
     while timeout_retry:
         try :
-            conn = http.client.HTTPSConnection("api.openai-hub.com", timeout=30)
+            conn = http.client.HTTPSConnection(settings.api_url, timeout=30)
             payload = json.dumps({
-                "model": "claude-3-5-sonnet-latest",
+                "model": settings.model,
                 "messages": [
                     {
                         "role": "user",
@@ -1377,8 +1378,8 @@ def llm_detection(prompt_content, res_file):
                 "temperature": 0.7
             })
             headers = {
-                # 'Authorization': 'Bearer sk-vFITaZNHLLtsyrVBvmY9PSYCkGJetglXxShzTkAtc8gpuQNS',  # 请替换为您的API密钥
-                'Authorization': 'Bearer sk-mNLMo22bO4BMO0D1n90hevv2inqFEmXsRG6VlX7sAXeAxHQq',
+                
+                'Authorization': settings.user_key,
                 'Content-Type': 'application/json'
             }
 
@@ -1426,7 +1427,7 @@ if __name__ == '__main__':
 
     # 获取当前时间戳
     # timestamp = int(time.time())
-    os.chdir("/media/author/4A7AC8957AC87F67/work2024/code/llm_api/code/llm_location/")
+    os.chdir("code/code/llm_location/")
     # 设置文件路径
     file_path = f"./temp/"
     res_path = f"./res/filepath.json"

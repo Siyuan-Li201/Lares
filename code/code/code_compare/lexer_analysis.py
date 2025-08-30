@@ -1,7 +1,7 @@
 import os, sys, json
 
-sys.path.append("code/code_compare/clexer")
-sys.path.append("code/code_compare")
+sys.path.append("code/code/code_compare/clexer")
+sys.path.append("code/code/code_compare")
 
 import scanner
 import extract_eq

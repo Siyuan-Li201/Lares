@@ -1,0 +1,9 @@
+cve_id,arch_name,compiler_name,optimization_level,project_name,version_name,function_name,patch_result,groundtruth,detection_result
+CVE-2013-6449,x86,clang,O0,openssl,1.0.1e,ssl_get_algorithm2_0x080e7180,pre-patch version,pre-patch version,TN
+CVE-2013-6449,x86,clang,O0,openssl,1.0.1f,ssl_get_algorithm2_0x080e7110,patched version,patched version,TP
+CVE-2013-6449,x86,clang,O1,openssl,1.0.1e,ssl_get_algorithm2_0x0809e960,pre-patch version,pre-patch version,TN
+CVE-2013-6449,x86,clang,O1,openssl,1.0.1f,ssl_get_algorithm2_0x0809e910,patched version,patched version,TP
+CVE-2013-6449,x86,clang,O2,openssl,1.0.1e,ssl_get_algorithm2_0x080a2650,patched version,pre-patch version,FN
+CVE-2013-6449,x86,clang,O2,openssl,1.0.1f,ssl_get_algorithm2_0x080a2660,patched version,patched version,TP
+CVE-2013-6449,x86,clang,O3,openssl,1.0.1e,ssl_get_algorithm2_0x080a9da0,patched version,pre-patch version,FN
+CVE-2013-6449,x86,clang,O3,openssl,1.0.1f,ssl_get_algorithm2_0x080a9da0,patched version,patched version,TP
