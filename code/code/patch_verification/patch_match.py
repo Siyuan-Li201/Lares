@@ -1,15 +1,5 @@
 
 # -*- coding: utf-8 -*-
-"""
-生成一个Python脚本，实现以下功能：
-1. 读取test4.c文件中的代码，保存为list1，每个成员为一个字典，包含行号和对应的该行代码。
-2. 读取claude_res_879228.json中的内容，提取"new match result"中的value值，保存为list2。
-3. 使用模糊匹配为list2中每个成员找到list1中相似度超过0.8的代码行。
-4. 保存匹配结果为一个新的字典，并将list2中每个成员在list1中匹配到的代码行按相似度降序排序形成一个列表。
-
-注：此脚本使用difflib库进行模糊匹配。
-"""
-
 import json
 import difflib
 from itertools import product
