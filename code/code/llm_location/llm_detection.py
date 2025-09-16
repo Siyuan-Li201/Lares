@@ -220,7 +220,6 @@ def source_slice_rev(source_code, patch_line_number, arg_max_line=200, arg_min_l
                 return source_sliced
 
 
-#帮我生成一个函数pseudo_slice(pseudo_code, arg_max_line=400, arg_min_line=100),参数是pseudo_code,arg_min_line和arg_max_line，返回值是code_sliced_list。pseudo_code是一段C语言代码，如果行数小于arg_max_line直接返回code_sliced_list。否则从第一行开始请记录每个"{"与“}”的闭合情况。如果直到最后一个"}"才第一次完美闭合，则去除第一个"{"及之前的代码，去除最后一个"}"及之后的代码，剩下的代码进行切割算法。否则从完美闭合点切割，将切割好的片段都递归传入pseudo_slice。每个片段如果切割的小于400则作为code_sliced_list的一个成员。如果片段中没有完美闭合的"{"和"}"且长度依然超过arg_max_line，则直接间隔arg_max_line切一次，每次判断剩余代码行是否大于arg_min_line，剩余代码行大于直接切，剩余代码行小于则当前从切。将所有切割好的片段组成code_sliced_list返回。最后对code_sliced_list中小于arg_min_line的片段进行合并算法。 切割算法：从第一行开始请再次记录每个"{"与“}”的闭合情况，从"{"与"}"完美闭合的点切割pseudo_code。每个切割完成的pseudo_code_sliced判断是否大于arg_max_line行，如果小于arg_max_line行则切割完成。如果大于arg_max_line行，递归的调用pseudo_slice对pseudo_code_sliced进行切割。最终将切割好的片段作为成员组成列表code_sliced_list返回 合并算法：判断与前一片段的合并后大于arg_max_line，如果大于则合并，再判断与后一片段合并后是否依然大于arg_max_line，如果大于则合并。合并后递归调用判断与新的前一段后后一段是否可以合并，直到无法合并停止。返回合并后的code_sliced_list。
 def pseudo_slice_V2(pseudo_code, arg_max_line=400, arg_min_line=100):
     """
     将C语言代码按照大括号闭合情况和行数限制进行切割和合并。
